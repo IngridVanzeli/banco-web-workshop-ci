@@ -15,11 +15,11 @@ jobs:
         run: npm install
 
       - name: Iniciando Servidor Mock
-        run: npm run-mock-server
+        run: npm run mock-server &
 
       - name: Iniciando Servidor da Aplicação
         run: npm run server
         
       - name: Executando os testes
-        run: npm cypress run
+        run: npx cypress run
         
